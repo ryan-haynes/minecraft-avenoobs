@@ -1,0 +1,5 @@
+#!/bin/sh
+tmux new-session -d 'vtop'
+tmux split-window -v 'docker-compose logs --follow Avenoobs0'
+tmux split-window -h 'docker-compose logs --follow Avenoobs1'
+tmux -2 attach-session -d

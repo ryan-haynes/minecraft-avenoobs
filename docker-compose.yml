@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  Avenoobs0:
+    image: itzg/minecraft-server
+    ports:
+      - 25565:25565
+    environment:
+      EULA: "TRUE"
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    volumes:
+      - ./Avenoobs0:/data
+
+  Avenoobs1:
+    image: itzg/minecraft-server
+    ports:
+      - 25566:25566
+    environment:
+      EULA: "TRUE"
+      SEED: "110918009997"
+      SERVER_PORT: "25566"
+      QUERY_PORT: "25566"
+      RCON_PORT: "25576"
+      ENABLE_AUTOPAUSE: "TRUE"
+      JVM_DD_OPTS: "disable.watchdog:true"
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    volumes:
+      - ./Avenoobs1:/data
