@@ -19,4 +19,5 @@ Our minecraft homelab
 
 #### Monitor
 > bin/minecraft-tmux
-![image](https://user-images.githubusercontent.com/87904343/126872563-93cf25e1-a2f0-4bc8-a29e-1f582ee25ec7.png)
+![image](https://user-images.githubusercontent.com/87904343/126872713-3a73e00d-5ca7-490f-98d1-dddaf851dd0d.png)
+
