@@ -7,11 +7,13 @@ services:
       - 25565:25565
     environment:
       EULA: "TRUE"
+      ENABLE_AUTOPAUSE: "TRUE"
+      JVM_DD_OPTS: "disable.watchdog:true"
     tty: true
     stdin_open: true
     restart: unless-stopped
     volumes:
-      - ./Avenoobs0:/data
+      - ./worlds/Avenoobs0:/data
 
   Avenoobs1:
     image: itzg/minecraft-server
@@ -29,4 +31,4 @@ services:
     stdin_open: true
     restart: unless-stopped
     volumes:
-      - ./Avenoobs1:/data
+      - ./worlds/Avenoobs1:/data
