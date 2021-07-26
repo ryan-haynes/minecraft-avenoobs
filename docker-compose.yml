@@ -3,21 +3,16 @@ version: "3.4"
 
 x-minecraft: &minecraft
   image: itzg/minecraft-server
+  env_file:
+    - "common.env"
   tty: true
   stdin_open: true
   restart: unless-stopped
 
-x-env: &env
-  EULA: "TRUE"
-  ENABLE_AUTOPAUSE: "TRUE"
-  JVM_DD_OPTS: "disable.watchdog:true"
- 
 
 services:
   Avenoobs0: 
     <<: *minecraft
-    environment:
-      <<: *env
     ports:
       - 25565:25565
     volumes:
@@ -28,7 +23,6 @@ services:
     ports:
       - 25566:25566
     environment:
-      <<: *env
       SEED: "110918009997"
       SERVER_PORT: "25566"
       QUERY_PORT: "25566"
